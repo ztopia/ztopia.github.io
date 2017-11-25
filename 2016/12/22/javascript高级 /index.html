@@ -1,0 +1,1278 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+
+
+
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="javascript," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ztopia'blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="javascript高级">
+<meta name="keywords" content="javascript">
+<meta property="og:type" content="article">
+<meta property="og:title" content="javascript">
+<meta property="og:url" content="https://github.com/ztopia/ztopia.github.io.git/2016/12/22/javascript高级 /index.html">
+<meta property="og:site_name" content="ztopia&#39;blog">
+<meta property="og:description" content="javascript高级">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-25T09:26:14.414Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="javascript">
+<meta name="twitter:description" content="javascript高级">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/ztopia/ztopia.github.io.git/2016/12/22/javascript高级 /"/>
+
+
+
+
+
+  <title>javascript | ztopia'blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ztopia'blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ztopia/ztopia.github.io.git/2016/12/22/javascript高级 /">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ztopia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ztopia'blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">javascript</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-22T12:38:22+08:00">
+                2016-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">javascript</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="javascript高级"><a href="#javascript高级" class="headerlink" title="javascript高级"></a>javascript高级</h1><a id="more"></a>
+<h2 id="组成"><a href="#组成" class="headerlink" title="组成"></a>组成</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ECMAScript 3  DOM BOM</span><br></pre></td></tr></table></figure>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><h3 id="基本数据类型"><a href="#基本数据类型" class="headerlink" title="基本数据类型"></a>基本数据类型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">number  string  boolean</span><br></pre></td></tr></table></figure>
+<h3 id="复杂数据类型"><a href="#复杂数据类型" class="headerlink" title="复杂数据类型"></a>复杂数据类型</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Object function Array Math  Date  RegExp  Number  String  Boolean</span><br></pre></td></tr></table></figure>
+<h3 id="基本包装类型"><a href="#基本包装类型" class="headerlink" title="基本包装类型"></a>基本包装类型</h3><p>Number  String  Boolean</p>
+<h3 id="null和undefined"><a href="#null和undefined" class="headerlink" title="null和undefined"></a>null和undefined</h3><p>delete只能移除普通类型的属性，arr，obj</p>
+<h2 id="引用类型，值类型"><a href="#引用类型，值类型" class="headerlink" title="引用类型，值类型"></a>引用类型，值类型</h2><p>1.引用类型指向的是一个地址，地址里面的数据改变则会变化，无论是函数。对象，数组</p>
+<p>2.值类型一旦赋值，再改变不会影响之前的值</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">//var num1 = 10;</span><br><span class="line">//var num2 = num1;</span><br><span class="line">//num1 = 20;</span><br><span class="line">//console.log(num2); //10</span><br></pre></td></tr></table></figure>
+<h2 id="判断数据类型"><a href="#判断数据类型" class="headerlink" title="判断数据类型"></a>判断数据类型</h2><h3 id="typeof"><a href="#typeof" class="headerlink" title="typeof"></a>typeof</h3><p>判断基本数据类型除了null，以及函数</p>
+<h3 id="Object-prototype-toString-call-判断类型"><a href="#Object-prototype-toString-call-判断类型" class="headerlink" title="Object.prototype.toString.call(判断类型)"></a>Object.prototype.toString.call(判断类型)</h3><p>返回值[object Array]</p>
+<h3 id="toString-的返回值"><a href="#toString-的返回值" class="headerlink" title=".toString()的返回值"></a>.toString()的返回值</h3><p>Array    :    string</p>
+<p>object    :    [object Object]</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">obj[&#123;&#125;] = &quot;你看我能不能添加进去&quot;;</span><br><span class="line">console.log(obj[&quot;[object Object]&quot;]);//等效下面的</span><br><span class="line">console.log(obj[&#123;&#125;]);</span><br></pre></td></tr></table></figure>
+<h2 id="基本数据类型和复杂数据类型运算"><a href="#基本数据类型和复杂数据类型运算" class="headerlink" title="基本数据类型和复杂数据类型运算"></a>基本数据类型和复杂数据类型运算</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">如果一个复杂的数据类型和一个基本的数据类型进行运算，会调用这个对象的valueOf方法，取他的原始值再和这个基本数据类型进行运算.</span><br><span class="line">如果valueOf取不到一个值，就调用这个对象的toString方法，得到的值再和这个基本数据类型进行运算。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">隐式转换中空的对象和数组为true，alert（），if(),while();for( in )存在隐式转换</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">//console.log([] == ![]); //true</span><br><span class="line">//[] == ![]</span><br><span class="line">//[] == !true</span><br><span class="line">//[] == false   //注意</span><br><span class="line">//[].valueOf() == false</span><br><span class="line">//[] == false</span><br><span class="line">//[].toString() == false</span><br><span class="line">//&quot;&quot; == false</span><br><span class="line">//false == false</span><br><span class="line">//true</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">//console.log(&#123;&#125; == !&#123;&#125;); //false</span><br><span class="line">//&#123;&#125; == !&#123;&#125;</span><br><span class="line">//&#123;&#125; == !true</span><br><span class="line">//&#123;&#125; == false</span><br><span class="line">//&#123;&#125;.valueOf() == false</span><br><span class="line">//&#123;&#125; == false</span><br><span class="line">//&#123;&#125;.toString() == false</span><br><span class="line">//&quot;[object Object]&quot; == false</span><br><span class="line">//true == false</span><br><span class="line">//false</span><br></pre></td></tr></table></figure>
+<p>console.log(null==false)   //false         parseInt(null)=NaN</p>
+<p>console.log(undefinedl==false)   //false         parseInt(undefined)=NaN</p>
+<h2 id="in关键字"><a href="#in关键字" class="headerlink" title="in关键字"></a>in关键字</h2><h3 id="for-in"><a href="#for-in" class="headerlink" title="for-in"></a>for-in</h3><p>for(var key in obj){</p>
+<p>​    key is string</p>
+<p>​    obj[key]</p>
+<p>}</p>
+<h3 id="in"><a href="#in" class="headerlink" title="in"></a>in</h3><p>“属性名或者下标” in obj</p>
+<h3 id="indexOf"><a href="#indexOf" class="headerlink" title="indexOf"></a>indexOf</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">indexOf 返回的是对应元素的下标，如果不存在这个元素，返回-1</span><br></pre></td></tr></table></figure>
+<h2 id="逻辑运算-：-amp-amp-和"><a href="#逻辑运算-：-amp-amp-和" class="headerlink" title="逻辑运算   ：  &amp;&amp;和||"></a>逻辑运算   ：  &amp;&amp;和||</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1.逻辑与  找假： 如果参与逻辑与运算的第一个式子能够转换成布尔类型的false，那么整个逻辑与表达式的结果就是第一个式子的值，如果第一个式子不能转换成布尔类型的false的话，那么整个逻辑与表达式的结果就是第二个式子的值。</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">2.逻辑或  找真：如果参与逻辑或运算的第一个式子能够转换成布尔类型的true的话，那么整个逻辑或表达式的结果就是第一个式子的值，如果第一个式子不能转换成布尔类型的true的话，那么整个逻辑或表达式的结果就是第二个式子的值。</span><br></pre></td></tr></table></figure>
+<p>应用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">e = e || window.event;</span><br><span class="line">var value1 = document.getElementById(&quot;one&quot;)  &amp;&amp; document.getElementById(&quot;one&quot;).value</span><br></pre></td></tr></table></figure>
+<h2 id="移除"><a href="#移除" class="headerlink" title="移除"></a>移除</h2><h3 id="delete"><a href="#delete" class="headerlink" title="delete"></a>delete</h3><p>1.删除没有用var声明的变量，不能删除全局变量</p>
+<p>2.移除对象中的属性（removeAttribute()方法只能移除dom对象中属性）</p>
+<p>3.数组中：arr.pop(); //删掉最后一个</p>
+<p>​          arr.push(); //往数组的最后一个添加元素</p>
+<p>​          arr.shift(); //删掉第一个</p>
+<p>​          arr.unshift(); //往数组的第一个添加元素</p>
+<h2 id="异常处理"><a href="#异常处理" class="headerlink" title="异常处理"></a>异常处理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">语法： try &#123;</span><br><span class="line">        有可能会出现异常的代码</span><br><span class="line">        throw &quot;你为什么不传一个数字捏？&quot;//自定义抛出异常</span><br><span class="line">     &#125;catch(e)&#123;</span><br><span class="line">        捕获到异常了之后要执行的处理-代码</span><br><span class="line">        e就是异常信息  //语法错误，不能捕获。</span><br><span class="line">     &#125;finally &#123;</span><br><span class="line">        不管有没有发生异常，都要执行的代码</span><br><span class="line">        释放资源的处理</span><br><span class="line">     &#125;</span><br></pre></td></tr></table></figure>
+<h2 id="面向对象"><a href="#面向对象" class="headerlink" title="面向对象"></a>面向对象</h2><p>一种编程的思维方式</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">var iQuery = &#123;</span><br><span class="line">    getEle:&#123;</span><br><span class="line">      tag:function (tagName)&#123;</span><br><span class="line">        return document.getElementsByTagName(tagName);</span><br><span class="line">      &#125;,</span><br><span class="line"></span><br><span class="line">      id: function (id) &#123;</span><br><span class="line">        return document.getElementById(id);</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">    css:&#123;</span><br><span class="line">      setStyle: function (eles)&#123;</span><br><span class="line">        for(var i = 0 ; i &lt; eles.length; i++)&#123;</span><br><span class="line">          var ele = eles[i];</span><br><span class="line">          ele.style.border = &quot;1px solid red&quot;;</span><br><span class="line">        &#125;</span><br><span class="line">      &#125;,</span><br><span class="line">      getStyle: function () &#123;</span><br><span class="line"></span><br><span class="line">      &#125;</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br><span class="line">   Animate:&#123;</span><br><span class="line">     animate: function () &#123;</span><br><span class="line"></span><br><span class="line">     &#125;</span><br><span class="line">   &#125;</span><br><span class="line">   //关于事件的模块</span><br><span class="line">   //关于属性的模块</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="特性"><a href="#特性" class="headerlink" title="特性"></a>特性</h3><p>封装  继承  多态</p>
+<p> 封装：就是将功能封装整合在对象内，只对外界暴露指定的接口，外界在使用的时候，只需要考虑接口怎么用，而不需要考虑内部的具体实现。</p>
+<p>继承：js中的继承  对象之间的继承。  一个对象如果想拥有其他对象的属性和方法，就可以使用继承。</p>
+<p>js中没有多态</p>
+<h4 id="继承"><a href="#继承" class="headerlink" title="继承"></a>继承</h4><p>a.混入式继承</p>
+<p>​     for(var key in wangjianlin){</p>
+<p>​          wangsicong[key] = wangjianlin[key];</p>
+<p>​      }</p>
+<p>b.替换原型</p>
+<p>​    ZhaNan.prototype = wangjianlin;</p>
+<p>​    var wangsicong = new ZhaNan([“豆得儿”,”林更新”,”林立群”,”0009901”]);</p>
+<p>c.混合式继承</p>
+<p>​      for(var key in wangjianlin){</p>
+<pre><code>ZhaNan.prototype[key] = wangjianlin[key];
+</code></pre><p>​        }</p>
+<p>​      var wangsicong = new ZhaNan([“豆得儿”,”林更新”,”林立群”,”0009901”]);</p>
+<p>​    简单封装：</p>
+<p>​          function extend(method,obj){</p>
+<p>​                for(var key in obj){</p>
+<p>​                      method.prototype[key] = obj[key];</p>
+<p>​                }</p>
+<p>​          }</p>
+<p>​         extend(GoodMan,wangjianlin);</p>
+<p>d. var wangsicong = Object.create(wangjianlin); // 原型继承</p>
+<p>实现一个兼容所有浏览器的 create 方法：</p>
+<p>​        var create = function(obj) {</p>
+<p>​        //思路：先判断浏览器是否支持 Object.create </p>
+<p>​        //如果支持，就直接使用</p>
+<p>​        //如果不支持，就自己实现！</p>
+<p>​                if(typeof Object.create === “function”) {</p>
+<p>​                                       return Object.create(obj);   }</p>
+<p>​                 function F() {}</p>
+<p>​        F.prototype = obj;</p>
+<p>​        return new F();</p>
+<h2 id="拓展内置对象"><a href="#拓展内置对象" class="headerlink" title="拓展内置对象"></a>拓展内置对象</h2><p>Array.prototype.mySort = function () {</p>
+<p>​    for(var i = 0 ; i &lt; this.length-1; i++){</p>
+<p>​      for(var j = 0 ; j &lt; this.length-i-1; j++){</p>
+<p>​        if(this[j] &gt; this[j+1]){</p>
+<p>​              var temp = this[j];</p>
+<p>​              this[j] = this[j+1];</p>
+<p>​              this[j+1] = temp;</p>
+<p>​            }</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>  }                      //不安全</p>
+<p>//安全拓展</p>
+<p>  //a.自己定义一个数组的构造函数。</p>
+<p>​      function MyArray(arr){</p>
+<p>​            this.arr = arr;</p>
+<p>​      }</p>
+<p>  //b.给这个构造函数的原型，继承自一个空数组。继承数组的一些属性</p>
+<p>​      MyArray.prototype = [];</p>
+<p>  //c.给这个我们自定写的构造函数的，原型添加一个 我们要扩展的方法。</p>
+<pre><code>MyArray.prototype.mySort = function () {
+</code></pre><p>​            for(var i = 0 ; i &lt; this.arr.length-1; i++){</p>
+<pre><code>for(var j = 0 ; j &lt; this.arr.length-i-1; j++){
+
+      if(this.arr[j] &gt; this.arr[j+1]){
+</code></pre><p>​                              var temp = this.arr[j];</p>
+<p>​                              this.arr[j] = this.arr[j+1];</p>
+<p>​                              this.arr[j+1] = temp;</p>
+<p>​                        }</p>
+<p>​                  }</p>
+<p>​            }</p>
+<p>​      }</p>
+<p>  //d.测试一下，利用我们自己写的构造函数创建一个对象。</p>
+<pre><code>var arr = [11,20,18,70];
+</code></pre><p>​      var arr1 = new MyArray(arr);</p>
+<p>​      arr1.mySort();</p>
+<p>​      console.log(arr1);</p>
+<p>  //捣乱的程序员B</p>
+<pre><code>Array.prototype.mySort = function () {
+</code></pre><p>​        console.log(“我是来捣乱的….”);</p>
+<p>​      }</p>
+<p>​      var arr2 = new MyArray(arr);</p>
+<p>​      arr2.mySort();</p>
+<p>​      console.log(arr2);</p>
+<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p> a.构造函数不需要返回值，会自动返回创建的那个对象。 如果是返回的简单的数据类型，会忽略；  如果返回的是复杂的数据类型，会把创建出来的那个对象给覆盖掉。</p>
+<p> function Person(name,age){</p>
+<p>​    this.name = name;</p>
+<p>​    this.age = age;</p>
+<p>​    console.log(this);</p>
+<p>​    //return [];</p>
+<p>  }</p>
+<p> var pp =new Person(“琳琳”,20);       //由Person构造函数构造出来的对象</p>
+<p>console.log(pp)               //返回对象  </p>
+<p>Person();                         //如果没有new那么返回undefined，其中的this指戴window对象</p>
+<h3 id="arguments对象"><a href="#arguments对象" class="headerlink" title="arguments对象"></a>arguments对象</h3><p>伪数组。存放的是函数的实参</p>
+<p>.callee  —-当前执行的这根函数，自调用函数的递归</p>
+<p>.length—– 实参的个数，模拟函数的重载</p>
+<h3 id="静态成员和实例成员"><a href="#静态成员和实例成员" class="headerlink" title="静态成员和实例成员"></a>静态成员和实例成员</h3><p>静态成员是构造函数点出来的属性</p>
+<p>实例成员是实例化对象点出来的属性</p>
+<h3 id="instanceOf"><a href="#instanceOf" class="headerlink" title=".instanceOf"></a>.instanceOf</h3><p>判断某个构造函数的原型是否在某个对象的原型链上</p>
+<p>Object instanceOf Function   //true</p>
+<h3 id="eval"><a href="#eval" class="headerlink" title="eval()"></a>eval()</h3><p>eval(需要执行的代码字符串)</p>
+<h2 id="原型"><a href="#原型" class="headerlink" title="原型"></a>原型</h2><p> 原型其实就是一个对象。（object）</p>
+<p>提供数据共享和实现继承。</p>
+<p>创建任意的构造函数的时候，系统都会帮我们自动的创建一个和这个构造函数关联的对象，这个对象就是原型。</p>
+<p>通过构造函数new创建出来的对象，都可以访问这个构造函数对应的原型中的成员。访问规则是先看构造函数中是否有这个属性，如果没有再去原型中查找。</p>
+<p>因为一个对象对创建出来他的原型就定下来了，不会随着原型改变而改变。</p>
+<p>构造函数不需要返回值</p>
+<p>Object.prototype.sayHi    一般存放公共的属性</p>
+<p>如果修改原型（把原型指向另外的一个对象） ；</p>
+<p>根据构造函数创建出来的对象，访问原型中的成员，要注意这个对象是 修改原型之前创建的，还是修改原型之后创建的。要想访问新的原型中的属性，那么在创建对象的时候必须在原型创建之后</p>
+<h3 id="测试原型属性"><a href="#测试原型属性" class="headerlink" title="测试原型属性"></a>测试原型属性</h3><p>. _ <em>proto</em> _两个杠</p>
+<p>console.log(Cat.prototype === c1.<strong>proto</strong>); //true</p>
+<h2 id="Object常用成员"><a href="#Object常用成员" class="headerlink" title="Object常用成员"></a>Object常用成员</h2><h3 id="constructor-NaN"><a href="#constructor-NaN" class="headerlink" title=".constructor"></a>.constructor</h3><p>指向原型对应的那个构造函数,判断对象是由哪个构造函数构造出来的。</p>
+<p>console.log(Cat.prototype.constructor === Cat); //true</p>
+<p> console.log(c1.<strong>proto</strong>.constructor === Cat);     //c1=new Cat(“11”,”11”)</p>
+<p> 原型可以替换。原型替换之后，就丢失了constructor的指向。 可以补回来</p>
+<p>​     Cat.prototype = {</p>
+<pre><code>sb:&quot;sb&quot;,
+</code></pre><p>​      constructor:Cat           //添加.contructor属性</p>
+<p>​      };</p>
+<p>​      console.log(Cat.prototype.constructor === Cat); //true</p>
+<h3 id="hasOwnProperty-NaN"><a href="#hasOwnProperty-NaN" class="headerlink" title=".hasOwnProperty"></a>.hasOwnProperty</h3><p>判断有无指定属性   .hasOwnProperty(属性名)</p>
+<h3 id="isPrototypeOf-NaN"><a href="#isPrototypeOf-NaN" class="headerlink" title=".isPrototypeOf"></a>.isPrototypeOf</h3><p>对象1.isPrototypeOf.对象2               //对象1是否为对象2的原型</p>
+<h3 id="propertyIsEnumerable-NaN"><a href="#propertyIsEnumerable-NaN" class="headerlink" title=".propertyIsEnumerable"></a>.propertyIsEnumerable</h3><p>对象.propertyIsEnumerable(属性名)   //该属性是否为自己提供的</p>
+<h2 id="作用域"><a href="#作用域" class="headerlink" title="作用域"></a>作用域</h2><p>函数是js中可以分割作用域，js中作用域是词法作用域</p>
+<h2 id="变量提升"><a href="#变量提升" class="headerlink" title="变量提升"></a>变量提升</h2><p>在一个函数中调用另外一个函数，看被调用的函数的变量关系：</p>
+<p> var num = 123;<br>  function func1(){</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">console.log(num);</span><br></pre></td></tr></table></figure>
+<p>  }<br>  function func2(){</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">func1();</span><br><span class="line">var num = 456;</span><br></pre></td></tr></table></figure>
+<p>  }<br>  func2();</p>
+<p>不管执行那个作用域里面的代码之前，都会把这个作用域中的变量的声明提前到当前这个作用域的最顶端，赋值语句保留在原地。函数也是如此声明提前赋值留在原地。</p>
+<p>变量提升在作用域提升，函数在函数内。</p>
+<p>new和（）之间的部分是构造函数</p>
+<h3 id="同名"><a href="#同名" class="headerlink" title="同名"></a>同名</h3><h4 id="变量同名"><a href="#变量同名" class="headerlink" title="变量同名"></a>变量同名</h4><p>后来者居上</p>
+<h4 id="变量和函数同名"><a href="#变量和函数同名" class="headerlink" title="变量和函数同名"></a>变量和函数同名</h4><p>如果在输出这个名字之前的时候，变量就已经有值了，输出的就是这个变量的值。</p>
+<p>如果在输出这个名字之前的时候，变量没有值，输出的就是这个同名的函数的函数体。</p>
+<h4 id="函数同名"><a href="#函数同名" class="headerlink" title="函数同名"></a>函数同名</h4><p>提升函数（函数表达式声明的函数提升函数名–可能因为没有赋值而报错）到函数调用前，调用在后面的</p>
+<h4 id="条件式函数"><a href="#条件式函数" class="headerlink" title="条件式函数"></a>条件式函数</h4><p>与函数表达式提升方式类似</p>
+<p>//如果以后有需求：条件满足是一种函数声明，条件不满足是另外一种函数声明，就写如下代码。</p>
+<p>   var num = 10;</p>
+<p>   var test;</p>
+<p>   if(num &gt; 0){</p>
+<p>​     test = function () {</p>
+<p>​       console.log(“哈哈”);</p>
+<p>​     }</p>
+<p>   }else {</p>
+<p>​     test = function () {</p>
+<p>​       console.log(“嘿嘿”);</p>
+<p>​     }</p>
+<p>   }</p>
+<p>   test();</p>
+<h4 id="函数中的形参声明和赋值的过程是在预解析之前的（不参与预解析）"><a href="#函数中的形参声明和赋值的过程是在预解析之前的（不参与预解析）" class="headerlink" title="函数中的形参声明和赋值的过程是在预解析之前的（不参与预解析）"></a>函数中的形参声明和赋值的过程是在预解析之前的（不参与预解析）</h4><p>  function test1(test2){</p>
+<p>​    // var test2 = 10; 这里打开会报错，因为如果变量和函数同名，变量有值，会使用变量test2不是函数</p>
+<p>​    function test2(){</p>
+<p>​      console.log(“哈哈”);</p>
+<p>​    }</p>
+<p>​    test2();</p>
+<p>  }</p>
+<p>  test1(10);</p>
+<h2 id="面试题"><a href="#面试题" class="headerlink" title="面试题"></a>面试题</h2><p>//  var a;</p>
+<p>//  if(“a” in window){</p>
+<p>//    a = 10;</p>
+<p>//  }</p>
+<p>//  alert(a); // 10</p>
+<p>  //———————</p>
+<p> if(“a” in window){</p>
+<p>   var a = 10;</p>
+<p> }</p>
+<p> alert(a); // 10</p>
+<h2 id="递归"><a href="#递归" class="headerlink" title="递归"></a>递归</h2><p>自己调用自己，一定要有结束的条件</p>
+<p>.children找到所有的子代   .childNodes找到所有的子代节点</p>
+<p> function getEles(ele){</p>
+<p>​    var list = [];</p>
+<p>​    var children = ele.children;</p>
+<p>​    for(var i = 0 ; i &lt; children.length; i++){</p>
+<p>​      var child = children[i];</p>
+<p>​        list.push(child);</p>
+<p>​        var temp = getEles(child);</p>
+<p>​        list =  list.concat(temp);</p>
+<p>​    }</p>
+<p>​    return list;</p>
+<p>  }</p>
+<p>  var father = document.getElementById(“father”);</p>
+<p>  var list1 = getEles(father);</p>
+<p>  console.log(list1);</p>
+<h2 id="Object-defineProperty"><a href="#Object-defineProperty" class="headerlink" title="Object.defineProperty()"></a>Object.defineProperty()</h2><p>Object.defineProperty() 方法会直接在一个对象上定义一个新属性，或者修改一个对象的现有属性， 并返回这个对象。</p>
+<p>语法：Object.defineProperty(obj, prop, descriptor)</p>
+<p>  //参数1obj: 需要操作的对象</p>
+<p>  //参数2prop: 需要定义的那个属性</p>
+<p>  //参数3descriptor ： 这个属性需要的一些描述，他是一个对象。</p>
+<p>​     writable :当且仅当该属性的 writable 为 true 时，该属性才能被赋值运算符改变。默认为 false。</p>
+<p>​         configurable :当且仅当该属性的 configurable 为 true 时，属性也能从对应的对象上被删除。默认为             false。</p>
+<p>​         enumerable : 当且仅当该属性的 enumerable 为 true 时，该属性才能够出现在对象的枚举属性中。默认为 false。</p>
+<p>​         value:  该属性对应的值。</p>
+<p>​         get  set  不能和value以及writable 一起使用。</p>
+<p>​             给属性赋值，相当于调用了set方法、取属性的值，相当于调用了get方法</p>
+<p>​             get set 其实就是给这个对象的属性赋值或者取值的时候，做一个过滤的逻辑。</p>
+<p>​             如果设置某个属性，只有get没有set，那么这个属性就是一个只读属性； 相反，如果某个属性只有set没有get，那么这个属性就是一个只写属性。</p>
+<h2 id="函数闭包"><a href="#函数闭包" class="headerlink" title="函数闭包"></a>函数闭包</h2><p>定义在一个函数内部的函数，能够读取其他函数内部的变量</p>
+<h3 id="写法"><a href="#写法" class="headerlink" title="写法"></a>写法</h3><p>第一种：</p>
+<p> function test1(){</p>
+<p>   var num = 10;</p>
+<p>   function test2(){</p>
+<p>​     return num;</p>
+<p>   }</p>
+<p>   return test2;</p>
+<p> }</p>
+<p> //调用test1函数，得到一个返回值f1，这个返回值f1其实就是那个test2函数。</p>
+<p> var f1 = test1();</p>
+<p> console.log(f1());</p>
+<p>第二种：</p>
+<p>此时test1保存的是这个自执行函数，执行之后的返回值。</p>
+<p> var test1 = (function () {</p>
+<p>   var num = 10;</p>
+<p>   function test2(){</p>
+<p>​     return num;</p>
+<p>   }</p>
+<p>   return test2;</p>
+<p> }());</p>
+<p> console.log(test1());           相当于只用调用一次。</p>
+<h3 id="注意："><a href="#注意：" class="headerlink" title="注意："></a>注意：</h3><p>使用闭包时候，外部函数只需要调用一次</p>
+<p>//  var f1 = outer();</p>
+<p>//  console.log(f1()); //11</p>
+<p>//  console.log(f1()); //12</p>
+<p>//  console.log(f1()); //13</p>
+<p>如果f1是自调用函数的话，f1.s1（），f1.s1（），都是会针对同一个外部函数来运算的</p>
+<p>//————————————————————————————–</p>
+<p>//  console.log(outer()()); //11</p>
+<p>//  console.log(outer()()); //11</p>
+<p>//  console.log(outer()()); //11</p>
+<p>特殊的：外部函数每次得到的是一种随机的，那么外部函数最好每次都调用</p>
+<h3 id="作用"><a href="#作用" class="headerlink" title="作用"></a>作用</h3><p>函数外部访问函数内部变量</p>
+<p>延长生命周期</p>
+<p>返回一个对象里面，包含需要执行的函数</p>
+<p> function outer(){</p>
+<p>   var num = 10;</p>
+<p>   return {</p>
+<p>​     getNum:function (){</p>
+<p>​       return num;</p>
+<p>​     },</p>
+<p>​     setNum:function (value){</p>
+<p>​       if(value &gt; 0){</p>
+<p>​         num = value;</p>
+<p>​       }</p>
+<p>​     }</p>
+<p>   };</p>
+<p> }</p>
+<p> //此时调用outer这个函数，返回一个对象，这个对象里面包含2个函数。</p>
+<p> var o1 = outer();                //o1返回的是一个对象</p>
+<p> o1.setNum(100);                //可以点出来</p>
+<p> console.log(o1.getNum());                  </p>
+<p>函数闭包解决循环注册i的问题</p>
+<p>  for(var i = 0 ; i &lt; lis.length; i++){</p>
+<p>​    //把这个递增的i每次保存起来</p>
+<p>​    function outer(){</p>
+<p>​      var j = i;</p>
+<p>​      function inner(){</p>
+<p>​        alert(j);</p>
+<p>​      }</p>
+<p>​      return inner;</p>
+<p>​    }</p>
+<p>​    lis[i].onclick = outer();            //这里需要一个函数，不需要调用</p>
+<p>  }</p>
+<h3 id="单线程"><a href="#单线程" class="headerlink" title="单线程"></a>单线程</h3><p>js是单线程。先执行主要任务，再执行次要任务setTimeout，setInterval</p>
+<p> for(var i = 0 ; i &lt; 10; i++){</p>
+<p>   function outer(){</p>
+<p>​     var j = i;</p>
+<p>​     function inner(){</p>
+<p>​       console.log(j);</p>
+<p>​     }</p>
+<p>​     return inner;</p>
+<p>   }</p>
+<p>   setTimeout(outer(),3000);            //两()是立即执行</p>
+<p> }</p>
+<h3 id="沙盒"><a href="#沙盒" class="headerlink" title="沙盒"></a>沙盒</h3><p>模块化，一个隔离的环境，减少全局变量的污染</p>
+<p> (function (w) {</p>
+<p>   function test1(){</p>
+<p>​     console.log(“哈哈哈”);</p>
+<p>   }</p>
+<p>   function test2(){</p>
+<p>​     console.log(“嘿嘿”);</p>
+<p>   }</p>
+<p>   w.test1 = test1;</p>
+<p>   w.test2 = test2;                    </p>
+<p> }(window));</p>
+<p> window.test1();</p>
+<p> window.test2();</p>
+<h3 id="缓存处理斐波那契数列"><a href="#缓存处理斐波那契数列" class="headerlink" title="缓存处理斐波那契数列"></a>缓存处理斐波那契数列</h3><p>  var i = 0;</p>
+<p>  var obj = {};</p>
+<p>  function getFibo(n){</p>
+<p>​    i++;</p>
+<p>​    //先去缓存中看看，有没有这值</p>
+<p>​    if(obj[n]){</p>
+<p>​      return obj[n];</p>
+<p>​    }else {</p>
+<p>​      //缓存中没有，说明之前没有算过，就要计算。</p>
+<p>​      if(n == 1 || n == 2){</p>
+<p>​         obj[n] = 1;</p>
+<p>​      }else {</p>
+<p>​         obj[n] = getFibo(n-1) + getFibo(n-2);</p>
+<p>​      }</p>
+<p>​      return obj[n];</p>
+<p>​    }</p>
+<p>  }</p>
+<p>console.log(getFibo(50)); //</p>
+<p>  console.log(i); </p>
+<h3 id="闭包方式处理斐波那契数列"><a href="#闭包方式处理斐波那契数列" class="headerlink" title="闭包方式处理斐波那契数列"></a>闭包方式处理斐波那契数列</h3><p>  function createFibo(){</p>
+<p>​    var obj = {};</p>
+<p>​    function getFibo(n){</p>
+<p>​      if(obj[n]){</p>
+<p>​        return obj[n];</p>
+<p>​      }else {</p>
+<p>​        if(n == 1 || n == 2){</p>
+<p>​          obj[n] = 1;</p>
+<p>​        }else {</p>
+<p>​          obj[n] = getFibo(n-1) + getFibo(n-2);</p>
+<p>​        }</p>
+<p>​        return obj[n];</p>
+<p>​      }</p>
+<p>​    }</p>
+<p>​    return getFibo;</p>
+<p>  }</p>
+<p>  var f1 = createFibo();</p>
+<p>  console.log(f1(50));</p>
+<h2 id="数组的高级方法"><a href="#数组的高级方法" class="headerlink" title="数组的高级方法"></a>数组的高级方法</h2><h3 id="forEach"><a href="#forEach" class="headerlink" title="forEach"></a>forEach</h3><p>语法：obj.forEach(function(value,index,arr){})</p>
+<p> //参数1：value 就是正在处理的数组的元素</p>
+<p> //参数2：index 就是正在处理的数组的元素的下标</p>
+<p> //参数3：就是这个正在处理的数组。              没什么用的</p>
+<h3 id="map"><a href="#map" class="headerlink" title="map"></a>map</h3><p>数组的映射</p>
+<p> var arr = [1,2,3,4,5];</p>
+<p>   var arrNew = arr.map(function (value, index, arr) {</p>
+<p>​          return value * 2;     //2,3,6,8,10</p>
+<p>  });</p>
+<h3 id="filter"><a href="#filter" class="headerlink" title="filter"></a>filter</h3><p>var arr = [2, 3 ,10,15,99];</p>
+<p>var arrNew = arr.filter(function (value,index,arr) {</p>
+<p>​    return value &gt; 10;</p>
+<p>  });</p>
+<h2 id="函数的三种执行方式"><a href="#函数的三种执行方式" class="headerlink" title="函数的三种执行方式"></a>函数的三种执行方式</h2><p>a.作为函数来执行</p>
+<p>​    this指代 的window</p>
+<p>b.作为方法执行</p>
+<p>​    this指代的就是就是这个方法对象</p>
+<p>c.作为构造函数指向</p>
+<p>​    如果new创建出来的对象，那么this指代这个对象</p>
+<p>​    如果把构造函数当成普通函数来执行的话，那么this指代window</p>
+<p><strong>//不管函数是怎么声明的，要看这个函数里面的this是谁，要看他是怎么调用的。</strong></p>
+<p><strong>//谁调用你这个函数，你这个函数里面的this就是谁。</strong></p>
+<h2 id="创建对象的方式"><a href="#创建对象的方式" class="headerlink" title="创建对象的方式"></a>创建对象的方式</h2><h3 id="工厂模式"><a href="#工厂模式" class="headerlink" title="工厂模式"></a>工厂模式</h3><h3 id="寄生模式"><a href="#寄生模式" class="headerlink" title="寄生模式"></a>寄生模式</h3><p>//寄生模式，把工厂模式的函数作为了 构造函数来调用，所以这个函数里面的this就是new关键字创建出来的那个对象。</p>
+<p>function createPerson(name){</p>
+<p>​    var obj = new Object();</p>
+<p>​    obj.name = name;</p>
+<p>​    obj.sayHi = function () {</p>
+<p>​      console.log(“哈哈哈:”+this.name);</p>
+<p>​    }</p>
+<p>​    this.sayHi = function () {</p>
+<p>​      console.log(“呵呵”);</p>
+<p>​    }</p>
+<p>​    console.log(this);</p>
+<p>​    return obj;                        //因为这里返回的是一个复杂类型的的对象，所以。。。。</p>
+<p>  }</p>
+<p>  //寄生模式，把工厂模式的函数作为了 构造函数来调用，所以这个函数里面的this就是new关键字创建出来的那个对象。</p>
+<p>  var p1 = new createPerson(“某婷”);</p>
+<p>  p1.sayHi();</p>
+<h2 id="函数上下文调用模式call-apply"><a href="#函数上下文调用模式call-apply" class="headerlink" title="函数上下文调用模式call(),apply()"></a>函数上下文调用模式call(),apply()</h2><p>函数调用，方法调用，构造函数调用中的this无法改变指向</p>
+<p>这两个方法存在于Function.prototype中，js中任意对象都有</p>
+<p>在传入一个基本数据类型this指向对应的包装类型Number,,,,,,</p>
+<p>传入undefined,null,window或者为空的时候this指向window</p>
+<p>谁调用的这两个方法，谁里面的this就改了</p>
+<p>一般将有某个方法给某个对象，某个对象作为参数一</p>
+<h3 id="call"><a href="#call" class="headerlink" title=".call()"></a>.call()</h3><p>语法：函数名.call(this需要指向的对象,arg1,arg2….);</p>
+<h3 id="apply"><a href="#apply" class="headerlink" title=".apply()"></a>.apply()</h3><p>语法：函数名.apply(this需要指向的对象,数组或者一个伪数组);</p>
+<h3 id="bind"><a href="#bind" class="headerlink" title=".bind()"></a>.bind()</h3><p> function test1(){</p>
+<p>​    console.log(this);            //test1调用了，所以这里面的this改为obj对象</p>
+<p>  }</p>
+<p>  var obj = {</p>
+<p>​    name:”张三”</p>
+<p>  };</p>
+<p>  function test3(){</p>
+<p>​    test1.call(obj);</p>
+<p>​    console.log(this);            //普通函数调用this指代window</p>
+<p>  }</p>
+<p>  test3();</p>
+<h3 id="伪数组转为真数组"><a href="#伪数组转为真数组" class="headerlink" title="伪数组转为真数组"></a>伪数组转为真数组</h3><p>伪数组：</p>
+<p>  var disArr = {</p>
+<p>​    0:”林黑群”,</p>
+<p>​    1:”周骚林”,</p>
+<p>​    2:”胡1号”,</p>
+<p>​    3:”凤姐”,</p>
+<p>​    4:”四妹”,</p>
+<p>​    length:5</p>
+<p>  };                                //是个对象，但是长得要像数组，index，length要有、</p>
+<p>1.var arr = [];</p>
+<p>  for(var i = 0 ; i &lt; disArr.length; i++){</p>
+<p>​    arr[i] = disArr[i];</p>
+<p>  }</p>
+<p>  console.log(arr)</p>
+<p>2.disArr = Array.prototype.slice.call(disArr);</p>
+<p>  console.log(disArr);</p>
+<p>3.var arr = [];</p>
+<p>  arr.push.apply(arr,disArr);</p>
+<p>  console.log(arr);</p>
+<p>4.var arr = [];</p>
+<p>  arr = arr.concat.apply(arr,disArr);</p>
+<p>  console.log(arr);</p>
+<h3 id="Math-max"><a href="#Math-max" class="headerlink" title="Math.max"></a>Math.max</h3><p>  var arr = [10,20,5,40,100];</p>
+<p>  var max = Math.max.apply(Math,arr);</p>
+<p>  console.log(max);</p>
+<h3 id="Array-prototype-sort"><a href="#Array-prototype-sort" class="headerlink" title="Array.prototype.sort"></a>Array.prototype.sort</h3><p> Array.prototype.sort.call(disArr, function (a,b) {</p>
+<p>​    return b-a;</p>
+<p>  });</p>
+<p>  console.log(disArr);</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/javascript/" rel="tag"># javascript</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/12/22/git/" rel="next" title="git">
+                <i class="fa fa-chevron-left"></i> git
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/01/01/Typescript/" rel="prev" title="Typescript">
+                Typescript <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="ztopia" />
+            
+              <p class="site-author-name" itemprop="name">ztopia</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yourname@gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://plus.google.com/yourname" target="_blank" title="Google">
+                    
+                      <i class="fa fa-fw fa-google"></i>Google</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#javascript高级"><span class="nav-number">1.</span> <span class="nav-text">javascript高级</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#组成"><span class="nav-number">1.1.</span> <span class="nav-text">组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据类型"><span class="nav-number">1.2.</span> <span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#基本数据类型"><span class="nav-number">1.2.1.</span> <span class="nav-text">基本数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#复杂数据类型"><span class="nav-number">1.2.2.</span> <span class="nav-text">复杂数据类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基本包装类型"><span class="nav-number">1.2.3.</span> <span class="nav-text">基本包装类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#null和undefined"><span class="nav-number">1.2.4.</span> <span class="nav-text">null和undefined</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#引用类型，值类型"><span class="nav-number">1.3.</span> <span class="nav-text">引用类型，值类型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#判断数据类型"><span class="nav-number">1.4.</span> <span class="nav-text">判断数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#typeof"><span class="nav-number">1.4.1.</span> <span class="nav-text">typeof</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Object-prototype-toString-call-判断类型"><span class="nav-number">1.4.2.</span> <span class="nav-text">Object.prototype.toString.call(判断类型)</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#toString-的返回值"><span class="nav-number">1.4.3.</span> <span class="nav-text">.toString()的返回值</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#基本数据类型和复杂数据类型运算"><span class="nav-number">1.5.</span> <span class="nav-text">基本数据类型和复杂数据类型运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#in关键字"><span class="nav-number">1.6.</span> <span class="nav-text">in关键字</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#for-in"><span class="nav-number">1.6.1.</span> <span class="nav-text">for-in</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#in"><span class="nav-number">1.6.2.</span> <span class="nav-text">in</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#indexOf"><span class="nav-number">1.6.3.</span> <span class="nav-text">indexOf</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#逻辑运算-：-amp-amp-和"><span class="nav-number">1.7.</span> <span class="nav-text">逻辑运算   ：  &&和||</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#移除"><span class="nav-number">1.8.</span> <span class="nav-text">移除</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#delete"><span class="nav-number">1.8.1.</span> <span class="nav-text">delete</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#异常处理"><span class="nav-number">1.9.</span> <span class="nav-text">异常处理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向对象"><span class="nav-number">1.10.</span> <span class="nav-text">面向对象</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#特性"><span class="nav-number">1.10.1.</span> <span class="nav-text">特性</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#继承"><span class="nav-number">1.10.1.1.</span> <span class="nav-text">继承</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拓展内置对象"><span class="nav-number">1.11.</span> <span class="nav-text">拓展内置对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#构造函数"><span class="nav-number">1.12.</span> <span class="nav-text">构造函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#arguments对象"><span class="nav-number">1.12.1.</span> <span class="nav-text">arguments对象</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#静态成员和实例成员"><span class="nav-number">1.12.2.</span> <span class="nav-text">静态成员和实例成员</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#instanceOf"><span class="nav-number">1.12.3.</span> <span class="nav-text">.instanceOf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#eval"><span class="nav-number">1.12.4.</span> <span class="nav-text">eval()</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原型"><span class="nav-number">1.13.</span> <span class="nav-text">原型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#测试原型属性"><span class="nav-number">1.13.1.</span> <span class="nav-text">测试原型属性</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object常用成员"><span class="nav-number">1.14.</span> <span class="nav-text">Object常用成员</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#constructor-NaN"><span class="nav-number">1.14.1.</span> <span class="nav-text">.constructor</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hasOwnProperty-NaN"><span class="nav-number">1.14.2.</span> <span class="nav-text">.hasOwnProperty</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#isPrototypeOf-NaN"><span class="nav-number">1.14.3.</span> <span class="nav-text">.isPrototypeOf</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#propertyIsEnumerable-NaN"><span class="nav-number">1.14.4.</span> <span class="nav-text">.propertyIsEnumerable</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#作用域"><span class="nav-number">1.15.</span> <span class="nav-text">作用域</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#变量提升"><span class="nav-number">1.16.</span> <span class="nav-text">变量提升</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#同名"><span class="nav-number">1.16.1.</span> <span class="nav-text">同名</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#变量同名"><span class="nav-number">1.16.1.1.</span> <span class="nav-text">变量同名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#变量和函数同名"><span class="nav-number">1.16.1.2.</span> <span class="nav-text">变量和函数同名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数同名"><span class="nav-number">1.16.1.3.</span> <span class="nav-text">函数同名</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#条件式函数"><span class="nav-number">1.16.1.4.</span> <span class="nav-text">条件式函数</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#函数中的形参声明和赋值的过程是在预解析之前的（不参与预解析）"><span class="nav-number">1.16.1.5.</span> <span class="nav-text">函数中的形参声明和赋值的过程是在预解析之前的（不参与预解析）</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面试题"><span class="nav-number">1.17.</span> <span class="nav-text">面试题</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#递归"><span class="nav-number">1.18.</span> <span class="nav-text">递归</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Object-defineProperty"><span class="nav-number">1.19.</span> <span class="nav-text">Object.defineProperty()</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数闭包"><span class="nav-number">1.20.</span> <span class="nav-text">函数闭包</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#写法"><span class="nav-number">1.20.1.</span> <span class="nav-text">写法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#注意："><span class="nav-number">1.20.2.</span> <span class="nav-text">注意：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#作用"><span class="nav-number">1.20.3.</span> <span class="nav-text">作用</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#单线程"><span class="nav-number">1.20.4.</span> <span class="nav-text">单线程</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#沙盒"><span class="nav-number">1.20.5.</span> <span class="nav-text">沙盒</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缓存处理斐波那契数列"><span class="nav-number">1.20.6.</span> <span class="nav-text">缓存处理斐波那契数列</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#闭包方式处理斐波那契数列"><span class="nav-number">1.20.7.</span> <span class="nav-text">闭包方式处理斐波那契数列</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的高级方法"><span class="nav-number">1.21.</span> <span class="nav-text">数组的高级方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#forEach"><span class="nav-number">1.21.1.</span> <span class="nav-text">forEach</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#map"><span class="nav-number">1.21.2.</span> <span class="nav-text">map</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#filter"><span class="nav-number">1.21.3.</span> <span class="nav-text">filter</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数的三种执行方式"><span class="nav-number">1.22.</span> <span class="nav-text">函数的三种执行方式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#创建对象的方式"><span class="nav-number">1.23.</span> <span class="nav-text">创建对象的方式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#工厂模式"><span class="nav-number">1.23.1.</span> <span class="nav-text">工厂模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#寄生模式"><span class="nav-number">1.23.2.</span> <span class="nav-text">寄生模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#函数上下文调用模式call-apply"><span class="nav-number">1.24.</span> <span class="nav-text">函数上下文调用模式call(),apply()</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#call"><span class="nav-number">1.24.1.</span> <span class="nav-text">.call()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#apply"><span class="nav-number">1.24.2.</span> <span class="nav-text">.apply()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#bind"><span class="nav-number">1.24.3.</span> <span class="nav-text">.bind()</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#伪数组转为真数组"><span class="nav-number">1.24.4.</span> <span class="nav-text">伪数组转为真数组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Math-max"><span class="nav-number">1.24.5.</span> <span class="nav-text">Math.max</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Array-prototype-sort"><span class="nav-number">1.24.6.</span> <span class="nav-text">Array.prototype.sort</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ztopia</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  
+  <div id="hexo-helper-live2d">
+      <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+  </div>
+    <style>
+      #live2dcanvas{
+      	-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+        position: fixed;
+        width: 150px;
+        height: 300px;
+        opacity:1;
+        
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -20px;
+      }
+	  
+    </style>
+    <script src="/live2d/device.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+	  if(typeof(device) != "undefined"){
+        if(device.mobile()){
+          document.getElementById("live2dcanvas").style.width = '75px';
+          document.getElementById("live2dcanvas").style.height = '150px';
+          document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+          document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5)<\/script>');
+        }else{
+          document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+          document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5)<\/script>');
+        }
+	  }else{
+        document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+        document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5)<\/script>');    
+	  }
+    })();
+    </script>
+
+
+
+</body>
+</html>

@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+
+
+
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="git," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ztopia'blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="GIT">
+<meta name="keywords" content="git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git">
+<meta property="og:url" content="https://github.com/ztopia/ztopia.github.io.git/2016/12/22/git/index.html">
+<meta property="og:site_name" content="ztopia&#39;blog">
+<meta property="og:description" content="GIT">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-22T04:47:51.534Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git">
+<meta name="twitter:description" content="GIT">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/ztopia/ztopia.github.io.git/2016/12/22/git/"/>
+
+
+
+
+
+  <title>git | ztopia'blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ztopia'blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ztopia/ztopia.github.io.git/2016/12/22/git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ztopia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ztopia'blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">git</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-12-22T12:38:22+08:00">
+                2016-12-22
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/" itemprop="url" rel="index">
+                    <span itemprop="name">前端</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/前端/git/" itemprop="url" rel="index">
+                    <span itemprop="name">git</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="GIT"><a href="#GIT" class="headerlink" title="GIT"></a>GIT</h1><a id="more"></a>
+<h2 id="Dash命令行"><a href="#Dash命令行" class="headerlink" title="Dash命令行"></a>Dash命令行</h2><p>pwd：当前文件夹路径</p>
+<p>ls:当前文件夹内容例举</p>
+<p>ls –hlep:帮助代码</p>
+<p>cd:进入文件夹    cd-   cd../退后</p>
+<p>cat:查看文件内容</p>
+<p>ls  -a:显示所有文件</p>
+<p>ls  -l:显示文件细节</p>
+<p>ls  -al:组合显示所有文件和细节</p>
+<p>mkdir:建文件夹  （-p需要的话建立一个父文件夹   -r递归这个文件夹，在删除和复制中使用）</p>
+<p>rmdir:删除文件夹（只能删除空文件夹，配合-r）</p>
+<p>rm:删除文件（不可逆） -r 递归删除</p>
+<p>touch:创建文件</p>
+<p>cp:复制文件       cp 1.js ./z/2.js  复制重命名  -n不覆盖</p>
+<p>mv:剪切文件     mv 1.js ./z/2.js  剪切重命名</p>
+<p>vi:写入文件–》i开始写入，esc退出编辑模式     :w保存:q退出编辑</p>
+<h2 id="git"><a href="#git" class="headerlink" title="git"></a>git</h2><p>git init :初始化git文件夹</p>
+<p>git add:将文件从工作区提交到暂存区</p>
+<p>git add . :将<strong>当前文件夹</strong>的所有文件提交</p>
+<p>git config –global user.name</p>
+<p> git config –global user.email</p>
+<p>git commit:将文件提交到主仓库  -m 备注</p>
+<p>git push src master:将主仓库的文件提交到服务器仓库</p>
+<p>git log: 查看提交日志</p>
+<p>git status:  关注文件的状态</p>
+<p>​ Untracked files 以下是新创建的文件，位于工作区</p>
+<p>​ Changes to be committed 文件在暂存区</p>
+<p>git remote add 变量名 src    ：保存服务器地址</p>
+<p>git remote remove <name>:删除某个变量服务器地址</name></p>
+<p>git remote rename oragin1 oragin2:将变量名改为oragin2</p>
+<p>git remote –help</p>
+<h3 id="二次开发"><a href="#二次开发" class="headerlink" title="二次开发"></a>二次开发</h3><h4 id="更新"><a href="#更新" class="headerlink" title="更新"></a>更新</h4><p>1.</p>
+<p>git clone src  自己新建的文件夹名     ：将服务器的代码下载到本地文件夹名的文件夹中，只能使用一次</p>
+<p>cd 进入文件夹</p>
+<p>touch 1.txt</p>
+<p>git add .</p>
+<p>git commit -m </p>
+<p>git push src master</p>
+<p>2.</p>
+<p>mkdir app3</p>
+<p>cd app3</p>
+<p>git init</p>
+<p>git pull src master</p>
+<p>touch 1.txt</p>
+<p>git add .</p>
+<p>git commit -m </p>
+<p>git push src master</p>
+<h4 id="提交更新"><a href="#提交更新" class="headerlink" title="提交更新"></a>提交更新</h4><p>git pull src master  先下载</p>
+<p>touch 2.txt</p>
+<p>git add .</p>
+<p>git commit -m</p>
+<p>git push src master</p>
+<h4 id="版本回滚"><a href="#版本回滚" class="headerlink" title="版本回滚"></a>版本回滚</h4><p>git log –oneline</p>
+<p>git reset –hard 版本号</p>
+<p>git reflog  ：所有日志包括最初的</p>
+<p>git checkout –1.txt</p>
+<p>git reset HEAD – 1.txt :将1.txt从暂存区回到工作区</p>
+<h2 id="文件的4种状态"><a href="#文件的4种状态" class="headerlink" title="文件的4种状态"></a>文件的4种状态</h2><ul>
+<li>新创建</li>
+<li><p>已修改</p>
+<ul>
+<li>一旦某个文件被修改过了，那么通过git status查看的结果就是：红色的modified</li>
+<li>如果通过git add 把该修改操作告诉了暂存区，那么通过git status查看的结果就是：绿色的modified</li>
+<li>如果希望让同事知道你修改某个文件，那么应该执行以下操作：<ul>
+<li>git add .</li>
+<li>git commit -m 修改了</li>
+<li>git push 服务器仓库地址 master</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>已删除</p>
+<ul>
+<li>如果一个文件被删除了，那么通过git status查看的结果就是：红色的deleted</li>
+<li>如果通过git add 把该删除操作告诉了暂存区，那么通过git status查看的结果就是：绿色的deleted</li>
+<li>如果希望让同事知道你删除某个文件，那么应该执行以下操作：<ul>
+<li>git add .</li>
+<li>git commit -m 删除了</li>
+<li>git push 服务器仓库地址 master</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>待提交<ul>
+<li>changes to be committed</li>
+</ul>
+</li>
+</ul>
+<h2 id="下载代码"><a href="#下载代码" class="headerlink" title="下载代码"></a>下载代码</h2><ul>
+<li>第一种情况：git clone <a href="https://github.com/hahareg12345/git114.git">https://github.com/hahareg12345/git114.git</a><ul>
+<li>会将项目代码下载到当前文件夹下面的git114文件夹</li>
+</ul>
+</li>
+<li>第二种情况：git clone <a href="https://github.com/hahareg12345/git114.git">https://github.com/hahareg12345/git114.git</a> git114-2<ul>
+<li>会将项目代码下载到当前文件夹下面的git114-2文件夹</li>
+</ul>
+</li>
+</ul>
+<h2 id="对某个项目进行二次开发的操作流程1"><a href="#对某个项目进行二次开发的操作流程1" class="headerlink" title="对某个项目进行二次开发的操作流程1"></a>对某个项目进行二次开发的操作流程1</h2><ul>
+<li>将服务器中的代码下载到本地：git clone <a href="https://github.com/hahareg12345/git114.git">https://github.com/hahareg12345/git114.git</a> git114-2</li>
+<li>进行到项目所在文件夹进行开发：cd git114-2</li>
+<li>之后就重复以下步骤进行提交代码<ul>
+<li>touch 1.txt</li>
+<li>git add .</li>
+<li>git commit -m 新创建</li>
+<li>git push 服务器仓库地址 master</li>
+</ul>
+</li>
+</ul>
+<h2 id="对某个项目进行二次开发的操作流程2"><a href="#对某个项目进行二次开发的操作流程2" class="headerlink" title="对某个项目进行二次开发的操作流程2"></a>对某个项目进行二次开发的操作流程2</h2><ul>
+<li>mkdir app3</li>
+<li>cd app3</li>
+<li>git init</li>
+<li>git pull 服务器仓库地址 master (为了将本地和服务器进行关联，并且下载服务器代码)</li>
+<li>之后就重复以下步骤进行提交代码<ul>
+<li>touch 1.txt</li>
+<li>git add .</li>
+<li>git commit -m 新创建</li>
+<li>git push 服务器仓库地址 master</li>
+</ul>
+</li>
+</ul>
+<h2 id="练习"><a href="#练习" class="headerlink" title="练习"></a>练习</h2><p>1、保存服务器地址<br>git remote add 变量名 url</p>
+<p>2、版本回滚<br>git reset –head 版本号</p>
+<p>3、查看版本回滚的操作日志<br>git reflog</p>
+<p>4、在公司里面，领导让我对某个github的项目(地址：origin)进行二次开发，我要开发一个新功能(例如往服务器中添加test.html文件)，我应该执行哪些步骤才能将test.html文件提交到服务器中<br>git clone origin file-&gt;touch test.html -&gt;git add test.html -&gt; git commit -m 添加了test.html -&gt;git push src master</p>
+<p>5、写出把一个文件隔离的操作步骤<br>touch .gitignore 将需要隔离的文件放入 .gitignore</p>
+<p>6、如何删除一个服务器中的文件<br>git rm file -&gt;git commit -m 删除了文件file -&gt; git push src master</p>
+<p>7、如何查看分支；并说明如何识别当前位于哪个分支<br>git branch 带*前缀的当前分支</p>
+<p>8、切换分支<br>git checkout 分支名</p>
+<p>9、删除分支<br>git branch -d </p>
+<p>10、分支合并<br>git checkout master<br>git merge 分支名 -m 备注信息</p>
+<h2 id="分支"><a href="#分支" class="headerlink" title="分支"></a>分支</h2><p>git log :基于这次开发的次数都可看见</p>
+<p>git reflog : 显示具体操作过程，提交，切换分支，</p>
+<h3 id="git-branch"><a href="#git-branch" class="headerlink" title="git branch"></a>git branch</h3><p>查看当前拥有的所有分支(带*前缀的是当前的分支)</p>
+<h3 id="git-branch-分支名"><a href="#git-branch-分支名" class="headerlink" title="git branch 分支名"></a>git branch 分支名</h3><p>在当前分支下创建新分支</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">--&gt;新分支会继承所有的当前分支到目前为止的所有代码</span><br></pre></td></tr></table></figure>
+<h3 id="git-checkout-分支名"><a href="#git-checkout-分支名" class="headerlink" title="git checkout 分支名"></a>git checkout 分支名</h3><p>切换到指定分支下面去</p>
+<h3 id="git-merge-m-备注信息"><a href="#git-merge-m-备注信息" class="headerlink" title="git merge -m 备注信息"></a>git merge -m 备注信息</h3><p>将指定分支合并到当前分支下</p>
+<h3 id="git-branch-d-分支名"><a href="#git-branch-d-分支名" class="headerlink" title="git branch -d 分支名"></a>git branch -d 分支名</h3><p>删除指定的分支</p>
+<h3 id="无论是创建分支还是合并分支时刻警醒当前位于哪个位置"><a href="#无论是创建分支还是合并分支时刻警醒当前位于哪个位置" class="headerlink" title="无论是创建分支还是合并分支时刻警醒当前位于哪个位置"></a>无论是创建分支还是合并分支时刻警醒当前位于哪个位置</h3><h3 id="对于一个仓库，如果没有任何本地提交，git-branch-没有结果"><a href="#对于一个仓库，如果没有任何本地提交，git-branch-没有结果" class="headerlink" title="对于一个仓库，如果没有任何本地提交，git branch 没有结果"></a>对于一个仓库，如果没有任何本地提交，git branch 没有结果</h3><h3 id="不要在本地分支上push代码"><a href="#不要在本地分支上push代码" class="headerlink" title="不要在本地分支上push代码"></a>不要在本地分支上push代码</h3>
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/git/" rel="tag"># git</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/11/22/require-js/" rel="next" title="require.js">
+                <i class="fa fa-chevron-left"></i> require.js
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/12/22/javascript高级 /" rel="prev" title="javascript">
+                javascript <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="ztopia" />
+            
+              <p class="site-author-name" itemprop="name">ztopia</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yourname@gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://plus.google.com/yourname" target="_blank" title="Google">
+                    
+                      <i class="fa fa-fw fa-google"></i>Google</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#GIT"><span class="nav-number">1.</span> <span class="nav-text">GIT</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Dash命令行"><span class="nav-number">1.1.</span> <span class="nav-text">Dash命令行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#git"><span class="nav-number">1.2.</span> <span class="nav-text">git</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#二次开发"><span class="nav-number">1.2.1.</span> <span class="nav-text">二次开发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#更新"><span class="nav-number">1.2.1.1.</span> <span class="nav-text">更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#提交更新"><span class="nav-number">1.2.1.2.</span> <span class="nav-text">提交更新</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#版本回滚"><span class="nav-number">1.2.1.3.</span> <span class="nav-text">版本回滚</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件的4种状态"><span class="nav-number">1.3.</span> <span class="nav-text">文件的4种状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#下载代码"><span class="nav-number">1.4.</span> <span class="nav-text">下载代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对某个项目进行二次开发的操作流程1"><span class="nav-number">1.5.</span> <span class="nav-text">对某个项目进行二次开发的操作流程1</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#对某个项目进行二次开发的操作流程2"><span class="nav-number">1.6.</span> <span class="nav-text">对某个项目进行二次开发的操作流程2</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#练习"><span class="nav-number">1.7.</span> <span class="nav-text">练习</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分支"><span class="nav-number">1.8.</span> <span class="nav-text">分支</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#git-branch"><span class="nav-number">1.8.1.</span> <span class="nav-text">git branch</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-branch-分支名"><span class="nav-number">1.8.2.</span> <span class="nav-text">git branch 分支名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-checkout-分支名"><span class="nav-number">1.8.3.</span> <span class="nav-text">git checkout 分支名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-merge-m-备注信息"><span class="nav-number">1.8.4.</span> <span class="nav-text">git merge -m 备注信息</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#git-branch-d-分支名"><span class="nav-number">1.8.5.</span> <span class="nav-text">git branch -d 分支名</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#无论是创建分支还是合并分支时刻警醒当前位于哪个位置"><span class="nav-number">1.8.6.</span> <span class="nav-text">无论是创建分支还是合并分支时刻警醒当前位于哪个位置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#对于一个仓库，如果没有任何本地提交，git-branch-没有结果"><span class="nav-number">1.8.7.</span> <span class="nav-text">对于一个仓库，如果没有任何本地提交，git branch 没有结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#不要在本地分支上push代码"><span class="nav-number">1.8.8.</span> <span class="nav-text">不要在本地分支上push代码</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ztopia</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  
+  <div id="hexo-helper-live2d">
+      <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+  </div>
+    <style>
+      #live2dcanvas{
+      	-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+        position: fixed;
+        width: 150px;
+        height: 300px;
+        opacity:1;
+        
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -20px;
+      }
+	  
+    </style>
+    <script src="/live2d/device.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+	  if(typeof(device) != "undefined"){
+        if(device.mobile()){
+          document.getElementById("live2dcanvas").style.width = '75px';
+          document.getElementById("live2dcanvas").style.height = '150px';
+          document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+          document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5)<\/script>');
+        }else{
+          document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+          document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5)<\/script>');
+        }
+	  }else{
+        document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+        document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5)<\/script>');    
+	  }
+    })();
+    </script>
+
+
+
+</body>
+</html>

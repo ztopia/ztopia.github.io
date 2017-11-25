@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+
+
+
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="移动web,rem," />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="ztopia'blog" type="application/atom+xml" />
+
+
+
+
+
+
+<meta name="description" content="移动WEB">
+<meta name="keywords" content="移动web,rem">
+<meta property="og:type" content="article">
+<meta property="og:title" content="移动web">
+<meta property="og:url" content="https://github.com/ztopia/ztopia.github.io.git/2016/10/17/移动web/index.html">
+<meta property="og:site_name" content="ztopia&#39;blog">
+<meta property="og:description" content="移动WEB">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-11-22T04:44:32.706Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="移动web">
+<meta name="twitter:description" content="移动WEB">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="https://github.com/ztopia/ztopia.github.io.git/2016/10/17/移动web/"/>
+
+
+
+
+
+  <title>移动web | ztopia'blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">ztopia'blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://github.com/ztopia/ztopia.github.io.git/2016/10/17/移动web/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="ztopia">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="ztopia'blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">移动web</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2016-10-17T21:58:26+08:00">
+                2016-10-17
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/移动web/" itemprop="url" rel="index">
+                    <span itemprop="name">移动web</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="移动WEB"><a href="#移动WEB" class="headerlink" title="移动WEB"></a>移动WEB</h1><a id="more"></a>
+<h2 id="向下覆盖，向上兼容"><a href="#向下覆盖，向上兼容" class="headerlink" title="向下覆盖，向上兼容"></a>向下覆盖，向上兼容</h2><p>css样式大的写下面，样式就会向下覆盖</p>
+<p>标签内col-md-5会使col-lg-5生效（不用写lg），这就是向上兼容</p>
+<h2 id="自封装字体图标"><a href="#自封装字体图标" class="headerlink" title="自封装字体图标"></a>自封装字体图标</h2><p>1.icomoon.io –&gt;icomoon App –&gt;import Icon:选择需要封装的字体图标文件 –&gt;Generate Font  –&gt;Download</p>
+<p>2.解压到文件夹，HTML引用style.css.需要什么图标直接使用类名即可</p>
+<h2 id="CSS约定"><a href="#CSS约定" class="headerlink" title="CSS约定"></a>CSS约定</h2><p>最外层元素用id。尽量使用直接子代选择器（&gt;div &gt;a）</p>
+<h3 id="less"><a href="#less" class="headerlink" title="less"></a>less</h3><p>less预处理器</p>
+<ol>
+<li>变量  @变量名:变量值</li>
+<li>嵌套  跟标签结构一样写CSS选择器结构  &amp;表示当前的元素</li>
+<li>混合  定义函数 如果有参数 (形参:默认值)</li>
+<li>注释 // 会被删除 /**/不会被删除</li>
+<li>引入 @import “demo.less”;</li>
+</ol>
+<h2 id="原生移动端"><a href="#原生移动端" class="headerlink" title="原生移动端"></a>原生移动端</h2><p>由于分辨率的原因，所有移动端的图片大小都缩小一半</p>
+<p>为了显示页面的大气，在每一部分加适当的padding。</p>
+<p>在所有浮动了父元素上加class=”clearfix”。</p>
+<p>.clearfix::before,<br>.clearfix::after {</p>
+<pre><code>content: &quot;&quot;;
+display: block;
+clear: both;
+</code></pre><p>}</p>
+<p>a便签先转块</p>
+<p>响应式宽高都不要写死，用百分比，定位也是，但是父元素要有定位</p>
+<h3 id="1-建立主体结构"><a href="#1-建立主体结构" class="headerlink" title="1.建立主体结构"></a>1.建立主体结构</h3><p>index.html</p>
+<p>css</p>
+<p>js</p>
+<p>less</p>
+<p>img</p>
+<p>lib(外部引用包)</p>
+<h3 id="2-引入less"><a href="#2-引入less" class="headerlink" title="2.引入less"></a>2.引入less</h3><p>先写base.less,</p>
+<p>再写index.less,</p>
+<p>在index.less中@import “base.less”</p>
+<p>html中引入base.less和index.less,最后引入less.js，注意在在引入base.less时， rel=”stylesheet/less”</p>
+<h3 id="3-左右固定，中间自适应"><a href="#3-左右固定，中间自适应" class="headerlink" title="3.左右固定，中间自适应"></a>3.左右固定，中间自适应</h3><p>大盒子不能写死宽度,100%即可。左右两个盒子写死宽度，分别定位到左右两边，中间盒子宽度100%。</p>
+<h3 id="4-Slider"><a href="#4-Slider" class="headerlink" title="4.Slider"></a>4.Slider</h3><p>因为响应式，所以不写死宽高，用百分比表示</p>
+<p>1.多加两张图片，第一张放最后，最后一张放第一。</p>
+<h3 id="5-原生移动端JS"><a href="#5-原生移动端JS" class="headerlink" title="5.原生移动端JS"></a>5.原生移动端JS</h3><p>用window.addEvenListener(“load”,function(){   调用函数 })</p>
+<p>1.window.addEventListener(“事件名称”,function{代码段})</p>
+<p>2.DOM.addEventListener(“事件名称”,function(){代码段})</p>
+<p>事件名称：</p>
+<p>window : scroll;</p>
+<p>Dom : transitionend ;                  </p>
+<pre><code>touchstart ;touchmove ; touchend      &gt;&gt;e.touches[0]
+</code></pre><p>​ sliderUI.addEventListener(“touchmove”, function(e) {</p>
+<pre><code>    moveX = e.touches[0].clientX;
+    distanceX = moveX - startX;
+    sliderUI.style.transform = &quot;translateX(&quot; + (-index * sliderWidth + distanceX) + &quot;px)&quot;
+    sliderUI.style.transition = &quot;none&quot;;
+})
+</code></pre><h2 id="屏幕适配问题"><a href="#屏幕适配问题" class="headerlink" title="屏幕适配问题"></a>屏幕适配问题</h2><h3 id="媒体查询"><a href="#媒体查询" class="headerlink" title="媒体查询"></a>媒体查询</h3><h3 id="rem"><a href="#rem" class="headerlink" title="rem"></a>rem</h3><p>root element</p>
+<p>em: 当前元素font-size:16px,1em=16px</p>
+<p>rem:html元素font-size:16px,1rem=16px</p>
+<p>html {  font-size:16px }          这个不是用来设置字体大小的，而是用来做屏幕适配</p>
+<p>而body { font-size :12px }      这个才是设置字体大小的，要设置</p>
+<p>div { width:10rem}      width:160px</p>
+<p>步骤：按照设计稿写死数据，使用rem工具生成媒体查询代码，注意补充body{}</p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/移动web/" rel="tag"># 移动web</a>
+          
+            <a href="/tags/rem/" rel="tag"># rem</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2016/10/01/canvas/" rel="next" title="canvas">
+                <i class="fa fa-chevron-left"></i> canvas
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/11/22/require-js/" rel="prev" title="require.js">
+                require.js <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar.gif"
+                alt="ztopia" />
+            
+              <p class="site-author-name" itemprop="name">ztopia</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">12</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                <a href="/categories/index.html">
+                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-name">分类</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                <a href="/tags/index.html">
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">标签</span>
+                </a>
+              </div>
+            
+
+          </nav>
+
+          
+            <div class="feed-link motion-element">
+              <a href="/atom.xml" rel="alternate">
+                <i class="fa fa-rss"></i>
+                RSS
+              </a>
+            </div>
+          
+
+          <div class="links-of-author motion-element">
+            
+              
+                <span class="links-of-author-item">
+                  <a href="https://github.com/yourname" target="_blank" title="GitHub">
+                    
+                      <i class="fa fa-fw fa-github"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="mailto:yourname@gmail.com" target="_blank" title="E-Mail">
+                    
+                      <i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  <a href="https://plus.google.com/yourname" target="_blank" title="Google">
+                    
+                      <i class="fa fa-fw fa-google"></i>Google</a>
+                </span>
+              
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#移动WEB"><span class="nav-number">1.</span> <span class="nav-text">移动WEB</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#向下覆盖，向上兼容"><span class="nav-number">1.1.</span> <span class="nav-text">向下覆盖，向上兼容</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#自封装字体图标"><span class="nav-number">1.2.</span> <span class="nav-text">自封装字体图标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#CSS约定"><span class="nav-number">1.3.</span> <span class="nav-text">CSS约定</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#less"><span class="nav-number">1.3.1.</span> <span class="nav-text">less</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原生移动端"><span class="nav-number">1.4.</span> <span class="nav-text">原生移动端</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-建立主体结构"><span class="nav-number">1.4.1.</span> <span class="nav-text">1.建立主体结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-引入less"><span class="nav-number">1.4.2.</span> <span class="nav-text">2.引入less</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-左右固定，中间自适应"><span class="nav-number">1.4.3.</span> <span class="nav-text">3.左右固定，中间自适应</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-Slider"><span class="nav-number">1.4.4.</span> <span class="nav-text">4.Slider</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#5-原生移动端JS"><span class="nav-number">1.4.5.</span> <span class="nav-text">5.原生移动端JS</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#屏幕适配问题"><span class="nav-number">1.5.</span> <span class="nav-text">屏幕适配问题</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#媒体查询"><span class="nav-number">1.5.1.</span> <span class="nav-text">媒体查询</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#rem"><span class="nav-number">1.5.2.</span> <span class="nav-text">rem</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">ztopia</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+
+  
+  <div id="hexo-helper-live2d">
+      <canvas id="live2dcanvas" width="150" height="300" class="live2d"></canvas>
+  </div>
+    <style>
+      #live2dcanvas{
+      	-webkit-touch-callout: none;
+		-webkit-user-select: none;
+		-khtml-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+        position: fixed;
+        width: 150px;
+        height: 300px;
+        opacity:1;
+        
+        right: 0px;
+        z-index: 999;
+        pointer-events: none;
+        bottom: -20px;
+      }
+	  
+    </style>
+    <script src="/live2d/device.min.js"></script>
+    <script type="text/javascript">
+    (function(){
+	  if(typeof(device) != "undefined"){
+        if(device.mobile()){
+          document.getElementById("live2dcanvas").style.width = '75px';
+          document.getElementById("live2dcanvas").style.height = '150px';
+          document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+          document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5)<\/script>');
+        }else{
+          document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+          document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5)<\/script>');
+        }
+	  }else{
+        document.write('<script type="text/javascript" src="/live2d/script.js"><\/script>');
+        document.write('<script>loadlive2d("live2dcanvas", "/live2d/assets/z16.model.json", 0.5)<\/script>');    
+	  }
+    })();
+    </script>
+
+
+
+</body>
+</html>
