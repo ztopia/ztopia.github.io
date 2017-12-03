@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://github.com/ztopia/ztopia.github.io.git/"/>
-  <updated>2017-11-26T01:52:04.680Z</updated>
+  <updated>2017-12-03T08:22:12.007Z</updated>
   <id>https://github.com/ztopia/ztopia.github.io.git/</id>
   
   <author>
@@ -17,16 +17,26 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="https://github.com/ztopia/ztopia.github.io.git/2017/11/26/test/"/>
-    <id>https://github.com/ztopia/ztopia.github.io.git/2017/11/26/test/</id>
-    <published>2017-11-26T01:52:04.000Z</published>
-    <updated>2017-11-26T01:52:04.680Z</updated>
+    <title>vue中传值方式</title>
+    <link href="https://github.com/ztopia/ztopia.github.io.git/2017/12/03/vue%E4%B8%AD%E4%BC%A0%E5%80%BC%E6%96%B9%E5%BC%8F/"/>
+    <id>https://github.com/ztopia/ztopia.github.io.git/2017/12/03/vue中传值方式/</id>
+    <published>2017-12-03T08:20:03.000Z</published>
+    <updated>2017-12-03T08:22:12.007Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="传值"><a href="#传值" class="headerlink" title="传值"></a>传值</h2><a id="more"></a><pre><code>父 --&gt; 子    前提:现在父组件中集成子组件    接收方(子组件) props    传值方(父组件) &lt;子组件 属性名称=值&gt;&lt;/子组件&gt;子 --&gt; 父    前提:现在父组件中集成子组件    通过自定义事件    接收方(父组件)        1、在使用子组件的时候，通过v-on:注册自定义事件，并且写好处理函数        2、在methods中，写上处理函数，如果要接收值，要写上形参    传值方(子组件)        this.$emit(&apos;自定义事件&apos;,值)非父子组件传值    前提:        必须要有一个公共的vue对象，bus    接收值的一方        bus.$on(&apos;自定义事件名称&apos;，处理函数)    传递值的一方        bus.$emit(&apos;自定义事件名称&apos;，值)</code></pre>]]></content>
     
     <summary type="html">
     
+      &lt;h2 id=&quot;传值&quot;&gt;&lt;a href=&quot;#传值&quot; class=&quot;headerlink&quot; title=&quot;传值&quot;&gt;&lt;/a&gt;传值&lt;/h2&gt;
+    
     </summary>
     
+      <category term="vue" scheme="https://github.com/ztopia/ztopia.github.io.git/categories/vue/"/>
+    
+    
+      <category term="vue" scheme="https://github.com/ztopia/ztopia.github.io.git/tags/vue/"/>
+    
+      <category term="传值方式" scheme="https://github.com/ztopia/ztopia.github.io.git/tags/%E4%BC%A0%E5%80%BC%E6%96%B9%E5%BC%8F/"/>
     
   </entry>
   
